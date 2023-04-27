@@ -4,7 +4,7 @@ SC: O(n)
 TC: O(n)
 */
 
-import java.util.HashMap;
+import java.util.*;
 
 public class Frequency {
     public static void main(String[] args) {
@@ -26,7 +26,10 @@ public class Frequency {
                 map.put( arr[i], 1);
             }
         }
-        System.out.println( map );
+        for (Map.Entry num:map.entrySet())
+        {
+            System.out.println( num.getKey() + "->" + num.getValue());
+        }
     }
 }
 
