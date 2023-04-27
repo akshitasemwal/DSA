@@ -24,5 +24,5 @@ public class PrefixSum {
 
 /*
 This solution uses the prefix sum technique to store successive sum of the elements in the array.
-It stores the sum of all the elements upto that particular element.
+It stores the sum of all the elements upto that particular element, i.e, from index 0 to i.
  */
