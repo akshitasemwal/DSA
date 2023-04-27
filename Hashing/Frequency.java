@@ -38,5 +38,5 @@ This solution uses a hashmap to store the frequency of the elements present in t
 [1] this condition checks if the map contains the current element of the array.
 If the element is present,  map.get(arr[i]) finds the frequency of arr[i] and increments it by 1.
 
-[2] if the elements isn't present in the map, it is put into the map with its value as 1.
+[2] if the element isn't present in the map, it is put into the map with its value as 1.
  */
