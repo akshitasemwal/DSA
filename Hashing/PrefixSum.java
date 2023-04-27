@@ -38,4 +38,4 @@ public class PrefixSum {
 [1] this solution uses conventional method of calculating the prefix sum for the entire array and then printing the required number.
 [2] this solution uses the prefix sum technique to store successive sum of the elements in the array.
 It stores the sum of all the elements upto that particular element, i.e, from index 0 to i.
- */
+*/
