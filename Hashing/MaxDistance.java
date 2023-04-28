@@ -1,7 +1,8 @@
 /*
 Given an array with repeated elements, the task is to find the maximum distance between two occurrences of an element.
 TC: O(n)
-SC:O(n)
+SC: O(n)
+https://www.geeksforgeeks.org/maximum-distance-two-occurrences-element-array/
 */
 
 import java.util.*;

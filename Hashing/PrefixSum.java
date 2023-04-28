@@ -3,6 +3,7 @@ You are given a list of N numbers. A query is specified by two numbers i and j.
 The answer to each query is the sum of every number between the range [i, j] (inclusive).
 TC: O(j-i) -> worst = O(n)
 SC: O(1)
+https://www.spoj.com/problems/CSUMQ/
  */
 
 public class PrefixSum {

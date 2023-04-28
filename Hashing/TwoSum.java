@@ -3,6 +3,7 @@ Given an array of integers nums and an integer target.
 Return indices of the two numbers such that they add up to target.
 TC: O(2n) -> O(n)
 SC: O(n)
+https://leetcode.com/problems/two-sum/
  */
 
 import java.util.HashMap;
