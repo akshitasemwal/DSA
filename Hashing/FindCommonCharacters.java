@@ -1,9 +1,9 @@
 /*
 Given a string array words, return an array of all characters that show up in all strings within the words (including duplicates).
 You may return the answer in any order.
-
 TC: O(n^2)
 SC: O(n)
+https://leetcode.com/problems/find-common-characters/description/
  */
 
 import java.util.*;
