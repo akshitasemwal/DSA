@@ -6,6 +6,7 @@ SC: O(1)
 https://www.spoj.com/problems/CSUMQ/
  */
 
+package Hashing;
 public class PrefixSum {
     public static void main(String[] args) {
         int n = 6;

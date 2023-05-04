@@ -5,6 +5,7 @@ TC: O(n)
 https://www.geeksforgeeks.org/find-frequency-number-array/
 */
 
+package Hashing;
 import java.util.*;
 
 public class Frequency {

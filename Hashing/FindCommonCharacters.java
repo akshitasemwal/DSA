@@ -6,6 +6,7 @@ SC: O(n)
 https://leetcode.com/problems/find-common-characters/description/
  */
 
+package Hashing;
 import java.util.*;
 public class FindCommonCharacters {
     public static void main(String[] args) {

@@ -6,6 +6,7 @@ SC: O(n)
 https://leetcode.com/problems/two-sum/
  */
 
+package Hashing;
 import java.util.HashMap;
 
 public class TwoSum {
@@ -13,6 +14,7 @@ public class TwoSum {
         int target = 9;
         int[] arr = {2, 7, -1, 15, 3, 6, 10};
         twoSum(arr, target);
+        System.out.println(hasArrayTwoCandidates(arr, target));
     }
 
     static void twoSum(int[] arr, int target){
@@ -30,6 +32,25 @@ public class TwoSum {
                 System.out.println( i +" "+ map.get(requiredNumber) );
             }
         }
+    }
+
+    static boolean hasArrayTwoCandidates(int arr[], int target) {
+        int n = arr.length;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i<n; i++)
+        {
+            map.put(arr[i], i);
+        }
+        for(int i = 0; i<n; i++)
+        {
+            int requiredNumber = target - arr[i];
+            if(map.containsKey(requiredNumber) && map.get(requiredNumber)!=i )
+            {
+                return true;
+            }
+            //System.out.println(requiredNumber);
+        }
+        return false;
     }
 }
 

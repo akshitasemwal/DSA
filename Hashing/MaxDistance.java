@@ -5,6 +5,7 @@ SC: O(n)
 https://www.geeksforgeeks.org/maximum-distance-two-occurrences-element-array/
 */
 
+package Hashing;
 import java.util.*;
 public class MaxDistance {
     public static void main(String[] args) {
