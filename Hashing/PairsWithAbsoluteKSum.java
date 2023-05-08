@@ -53,5 +53,7 @@ To solve this problem, we populate the hashmap while traversing the array.
 [1] if map doesnt contain arr[i], then it is inserted into the map along with 1 as its frequency.
 If it is found in the map, its frequency is increased.
 [2,3] if map contains the required numbers, the frequency of required numbers is added to the count,
-as the required numbers appeared before the current element(arr[i]) and they all form individual pairs with the current element
+as the required numbers appeared before the current element(arr[i]) and they all form individual pairs with the current element.
+
+Can also be done using count sort if the number of elements in less.
 */
