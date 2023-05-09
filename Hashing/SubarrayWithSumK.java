@@ -53,4 +53,6 @@ if ( s - k ) is present in the map, it means that the sum of the subarray is k. 
 increment it by the number of times there existed a subarray with sum k.
 Because the hashmap is populated while traversal, it will ensure that we are checking only the subarrays which we have traversed till now.
 [3] this is done to ensure that the subarrays who start from index 0 are also calculated because then s - k = 0, as s will be equal to k.
+We could replace this by :
+if ( arr[i] == k ) count++;
 */
