@@ -9,7 +9,7 @@ SC: O(n)
 package Hashing;
 import java.util.*;
 
-public class LongestSubarrayWithSumK {
+public class LongestSubarrayWithKSum {
     public static void main(String[] args) {
         int[] arr = {10, 5, 2, 7, 1, 9};
         int k = 15;
