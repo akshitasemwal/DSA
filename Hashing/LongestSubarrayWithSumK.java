@@ -25,14 +25,14 @@ public class LongestSubarrayWithSumK {
         for(int i = 0; i<n; i++)
         {
             sum += arr[i];
-            if(map.containsKey(sum - k))
+            if(map.containsKey(sum - k))                       //[1]
             {
-                if( max < (i - map.get(sum - k)))
+                if( max < (i - map.get( sum - k )))
                 {
-                    max = i - map.get( sum-k );
+                    max = i - map.get( sum - k );
                 }
             }
-            if(!map.containsKey(sum))
+            if(!map.containsKey(sum))                          //[2]
             {
                 map.put(sum, i);
             }
@@ -40,3 +40,15 @@ public class LongestSubarrayWithSumK {
         return max;
     }
 }
+
+/*
+Sliding window can only be used if all the elements are positive.
+Uses hashmap and prefix sum to check if the map contains the subarray with required sum k.
+[1] if the hashmap contains prefix sum(till arr[i]) - k(sum of the subarray),
+then the difference between the current index, and the first occurrence of ( sum - k ) is compared with max length fund till now.
+[2] if hashmap doesnt contain the sum, it'll be added to the map along with its first occurrence,
+to calculate the longest length.
+
+If the question requires calculating length -> map contains prefix sum, with its first occurence.
+If the question requires the count of subarrays -> map contains prefix sum, and their frequency.
+*/
