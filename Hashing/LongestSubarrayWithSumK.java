@@ -49,6 +49,6 @@ then the difference between the current index, and the first occurrence of ( sum
 [2] if hashmap doesnt contain the sum, it'll be added to the map along with its first occurrence,
 to calculate the longest length.
 
-If the question requires calculating length -> map contains prefix sum, with its first occurence.
+If the question requires calculating length -> map contains prefix sum, with its first occurrence.
 If the question requires the count of subarrays -> map contains prefix sum, and their frequency.
 */
