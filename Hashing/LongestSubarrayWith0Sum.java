@@ -9,7 +9,7 @@ SC: O(n)
 package Hashing;
 import java.util.*;
 
-public class LargestSubarrayWith0Sum {
+public class LongestSubarrayWith0Sum {
     public static void main(String[] args) {
         int n = 4;
         int[] arr = {-1, 1, -1, 1};
