@@ -53,4 +53,5 @@ This solution uses a hashmap to store the digit sum along with its number.
 then we will add the numbers and store it in currSum. If it is greater than max then max = currSum.
 [2] if the current number is greater than the previous number whose digits sum is same,
 then the greater of the previous number(map.get(dSum)) or the current number(arr[i]) will be the value of dSum to maximize the max sum.
+[3] if the digit sum is not in the hashmap, it is inputted along with its number.
  */
