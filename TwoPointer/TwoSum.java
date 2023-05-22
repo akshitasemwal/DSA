@@ -1,7 +1,7 @@
 /*
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-TC: O(n)
-SC: O(1)
+TC: O(n log n)
+SC: O(n)
 https://leetcode.com/problems/two-sum/description/
 */
 
@@ -15,29 +15,47 @@ public class TwoSum {
         twoSum(nums, target);
     }
 
-
-    static class Pair {
-        int idx, val;
-
-        public Pair(int idx, int val) {
-            this.idx = idx;
-            this.val = val;
+    public static void twoSum(int[] arr, int target) {
+        int[] temp = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(arr);
+        int n = arr.length;
+        int j = n-1;
+        int i = 0;
+        int[] nums = new int[2];
+        while(i<=j)
+        {
+            if(arr[i]+arr[j]>target)
+            {
+                j--;
+            }
+            else if(arr[i]+arr[j]<target)
+            {
+                i++;
+            }
+            else if(arr[i]+arr[j]==target)
+            {
+                nums[0] = arr[i];
+                nums[1] = arr[j];
+                break;
+            }
         }
-    }
-
-    public static void twoSum(int[] nums, int target) {
-        int n = nums.length;
-        Pair[] pairs = new Pair[n];
-        for (int i = 0; i < n; i++) pairs[i] = new Pair(i, nums[i]);
-        Arrays.sort(pairs, Comparator.comparingInt(o -> o.val));
-        int l = 0, r = n - 1;
-        while (l < r) {
-            int sum = pairs[l].val + pairs[r].val;
-            if (sum == target) {
-                return new int[]{ pairs[l].idx, pairs[r].idx };
-            } else if (sum < target) l++;
-            else r--;
+        int flag = 0;
+        for(i = 0; i<n; i++)
+        {
+            if(temp[i] == nums[0] && flag==0)
+            {
+                nums[0] = i;
+                flag = 1;
+            }
+            else if(temp[i]==nums[1])
+            {
+                nums[1] = i;
+            }
         }
-        System.out.print(pairs[0]+" "+pairs[1]);
+        System.out.println(nums[0]+" "+nums[1]);
     }
 }
+
+/*
+
+*/
