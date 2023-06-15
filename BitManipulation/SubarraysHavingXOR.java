@@ -6,7 +6,7 @@ TC: O(n)
 SC: O(n)
 */
 
-package Hashing;
+package BitManipulation;
 import java.util.*;
 
 public class SubarraysHavingXOR {
