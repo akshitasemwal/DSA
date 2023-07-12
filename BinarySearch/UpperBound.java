@@ -23,24 +23,16 @@ public class UpperBound {
         while( l <= r )
         {
             mid = l + ( r - l ) / 2;
-            if( arr[mid] < x )                       //[1]
+            if( arr[mid] <= x )                       //[1]
             {
                 l = mid+1;
             }
-            else if ( arr[mid] > x)                  //[2]
+            else                                       //[2]
             {
-                if( arr[mid-1] > x )
-                {
-                    r = mid - 1;
-                }
-                else
-                {
-                    index = mid;
-                    break;
-                }
+                r = mid - 1;
             }
         }
-        return index;
+        return arr[l];
     }
 }
 
@@ -48,9 +40,10 @@ public class UpperBound {
 Upper bound: first number in the sorted array which is greater than a given number, and closest to it.
 
 [1] to find the upper bound, we will start checking if the mid element is greater or less than x.
-If it is less than x, he left array can be neglected and l gets updated to mid+1.
+If it is less than or equal to x, he left array can be neglected and l gets updated to mid+1.
+l is also a candidate for upperbound element.
 
-[2] if it is greater than x, we first need to check if there exists another element which is greater than x but less than the current element.
-If such an element exists, we can now neglect the right side of mid and update r as mid - 1,
-otherwise the current element is the desired element and its index is returned.
+[2] if it is greater than x, we neglect the right side of the array, completely.
+
+We return the element at l index, because l all the candidates for upperbounds are stored at l.
 */
