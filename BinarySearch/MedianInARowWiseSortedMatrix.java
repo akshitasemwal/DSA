@@ -1,6 +1,8 @@
 /*
 Given a row wise sorted matrix of size R*C where R and C are always odd, find the median of the matrix.
 https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
+TC: O(log(r) * R * log(C))
+SC: O(1)
 */
 
 package BinarySearch;
