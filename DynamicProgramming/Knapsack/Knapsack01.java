@@ -61,9 +61,15 @@ The final answer will be stored in the last cell, i.e., dp[n][w].
 [2] since the base case for the given problem is that if no. of items(n), and capacity of knapsack(w) is 0, the output will be 0,
 we initialize al the cells in the dp as 0 wherever i == 0 and j == 0.
 
-[3] for each item, check if it can be included in the knapsack without exceeding its capacity.
+[3] We use i-1 to match the 0-based indexing of the array, as the indices 0 are used to store the base case values.
+Indexing in array: 0 1 2 3 4 5 6
+Indexing in dp:  0 1 2 3 4 5 6 7 (and hence size of dp is taken as n+1)
+Therefore, arr[i - 1] == arr[0] as i = 1.
+
+For each item, check if it can be included in the knapsack without exceeding its capacity.
 If yes, calculate the value that can be achieved by including the item (i.e., val[i - 1])
 and adding it to the maximum value that can be achieved with the remaining capacity (dp[i - 1][j - wt[i - 1]]).
+This gives the sum of weights of current element + past elements.
 Compare this value with the maximum value achieved without including the item (dp[i - 1][j]) and store the maximum in dp[i][j].
 
 [4] if the item's weight exceeds the knapsack capacity,
