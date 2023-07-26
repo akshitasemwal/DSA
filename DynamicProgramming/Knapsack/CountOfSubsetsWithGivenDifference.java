@@ -67,7 +67,7 @@ public class CountOfSubsetsWithGivenDifference {
 }
 
 /*
-The problem aims at finding the count of subarrays such that when the elements in each subarray are added,
+The problem aims at finding the count of subsets such that when the elements in each subsets are added,
 they sum upto s1 and s2, and the absolute difference between s1 and s2 should be equal to d.
 
 We observe that:
