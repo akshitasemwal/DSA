@@ -18,28 +18,74 @@ public class Search2DMatrix {
         System.out.print(searchMatrix(matrix, target));
     }
 
+//    public static boolean searchMatrix(int[][] matrix, int target) {
+//        for(int i = 0; i< matrix.length; i++)
+//        {
+//            int n = matrix[i].length;
+//            int l = 0;
+//            int r = n-1;
+//            int mid = l + ( r - l ) / 2;
+//            while( l <= r )
+//            {
+//                mid = l + ( r - l ) / 2;
+//                if( matrix[i][mid] < target )
+//                {
+//                    l = mid + 1;
+//                }
+//                else if( matrix[i][mid] > target )
+//                {
+//                    r = mid - 1;
+//                }
+//                else
+//                {
+//                    return true;
+//                }
+//            }
+//        }
+//        return false;
+//    }
+
+
     public static boolean searchMatrix(int[][] matrix, int target) {
-        for(int i = 0; i< matrix.length; i++)
+        int l = 0;
+        int n = matrix.length;
+        int r = n - 1;
+        int mid = l + ( r - l ) / 2;
+        int i = 0;
+
+        while ( l<=r )                           //[1]
         {
-            int n = matrix[i].length;
-            int l = 0;
-            int r = n-1;
-            int mid = l + ( r - l ) / 2;
-            while( l <= r )
+            mid = l + ( r - l ) / 2;
+            if( matrix[mid][0] < target && matrix[mid][matrix[mid].length - 1] > target )
             {
-                mid = l + ( r - l ) / 2;
-                if( matrix[i][mid] < target )
-                {
-                    l = mid + 1;
-                }
-                else if( matrix[i][mid] > target )
-                {
-                    r = mid - 1;
-                }
-                else
-                {
-                    return true;
-                }
+                break;
+            }
+            else if(matrix[mid][0] > target)
+            {
+                r = mid - 1;
+            }
+            else
+            {
+                l = mid + 1;
+            }
+        }
+        int row =  (l+r)/2;
+        l = 0;
+        r = matrix[row].length - 1;
+        while( l<= r )
+        {
+            mid = l + ( r - l ) / 2;
+            if( matrix[row][mid] == target )
+            {
+                return true;
+            }
+            else if( matrix[row][mid] > target )
+            {
+                r = mid - 1;
+            }
+            else
+            {
+                l = mid + 1;
             }
         }
         return false;
@@ -50,4 +96,9 @@ public class Search2DMatrix {
 This solution uses binary search method to find if a target is present in the matrix or not.
 Instead of traversing the entire matrix in nested loops, we traverse each row,
 and then use binary search operation to find the presence of the target.
+
+
+Instead of checking for the target in each row, we first select the row which can contain the target.
+We do so by comparing the target with the first element in each row. If the first element is smaller than target,
+but its last element is greater than target, it means the target is present in that particular row.
 */
