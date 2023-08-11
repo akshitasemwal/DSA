@@ -6,7 +6,7 @@ TC: O(n)
 SC: O(1)
 */
 
-package SlidingWindow;
+package SlidingWindow.FixedWindow;
 
 public class CountNumberOfSubarrays {
     public static void main(String[] args) {

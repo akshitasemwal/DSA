@@ -8,7 +8,7 @@ TC: O(n)
 SC: O(1)
 */
 
-package SlidingWindow;
+package SlidingWindow.FixedWindow;
 
 public class MinimumMemoryUsed {
     public static void main(String[] args) {

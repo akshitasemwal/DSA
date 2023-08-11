@@ -9,7 +9,7 @@ TC: O(1)
 SC: O(n)
 */
 
-package SlidingWindow;
+package SlidingWindow.FixedWindow;
 import java.util.*;
 
 public class FindConsecutiveIntegersFromDataStream {

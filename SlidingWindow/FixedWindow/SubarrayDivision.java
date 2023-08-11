@@ -9,7 +9,7 @@ TC: O(n)
 SC: O(1)
  */
 
-package SlidingWindow;
+package SlidingWindow.FixedWindow;
 import java.util.*;
 
 public class SubarrayDivision {

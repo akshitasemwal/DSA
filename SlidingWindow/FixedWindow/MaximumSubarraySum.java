@@ -5,7 +5,7 @@ SC: O(1)
 TC: O(n)
 */
 
-package SlidingWindow;
+package SlidingWindow.FixedWindow;
 import java.util.*;
 
 public class MaximumSubarraySum {
@@ -17,18 +17,19 @@ public class MaximumSubarraySum {
 
     static long maximumSumSubarray(int k, List<Integer> arr,int n){
         long sum = 0;
-        long max = Long.MIN_VALUE;
+        long max = 0;
+        int i = 0;
         int j = 0;
-        for(int i = 0; i<k; i++)                    //[1]
+        while ( j < n )
         {
-            sum += arr.get(i);
-        }
-        max = Math.max(sum, max);
-        for(int i = k; i<n; i++)                    //[2]
-        {
-            sum += arr.get(i) - arr.get(j);
+            sum += arr.get(j);
+            if( j - i + 1 == k)
+            {
+                max = Math.max( sum, max);
+                sum -= arr.get(i);
+                i++;
+            }
             j++;
-            max = Math.max(sum, max);
         }
         return max;
     }
